@@ -8,9 +8,50 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
     />
-    <link rel="stylesheet" href="../CSS/main.css" />
   </head>
   <body>
+    <style>
+      body {
+    font-family: poppins, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+h1, h2 {
+    text-align: center;
+}
+form {
+    margin: 20px auto;
+    max-width: 500px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+input[type="text"],
+input[type="number"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    padding: 10px 20px;
+    background-color: #000099;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: blue;
+}
+
+    </style>
     <h1>Subarray Sum Check</h1>
     <form id="form_sum_check" method="post">
       <label for="arrayInput">Array element (comma-separated):</label>
