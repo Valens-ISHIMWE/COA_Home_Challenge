@@ -1,43 +1,83 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-}
-h1 {
-    color: #000;
+body {
+    margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif; 
-}
-.text-primary{
-color: rgb(0, 255, 220);
-}
-
-.btn {
-    display: block;
-    margin: 10px;
-    padding: 10px 20px;
-    color: #000099;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: Poppins;
-    transition: background-color 0.3s,box-shadow 0.3s;
-    font-weight: 700;
-}
-.btn:hover{
-    background-color: #000099;
-    color: white;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-}
-.full-view {
-    width: 100%;
+    box-sizing: border-box;
   }
   
-  .full-view .image img {
+  .gallery {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .image-interaction {
+    position: relative;
+    border: 2px solid black;
+    overflow: hidden;
+    cursor: pointer;
+    height: 100vh;
+    width: 25vw;
+  }
+  
+  .image {
     width: 100%;
-    height: auto;
+    height: 100%;
+    display: block;
+    transition: filter 0.3s ease;
+  }
+  
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .image-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease;
+    padding: 10px 0;
+  }
+  
+  .image-info .subject {
+    font-size: 2.5rem; 
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .image-info .location {
+    color: gray;
+    margin-bottom: 10px; 
+    font-weight: 800;
+  }
+  
+  .image-info button {
+    color: cyan;
+    display: none;
+    padding: 5px 10px;
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  .image-interaction:hover .image {
+    filter: blur(15px);
+  }
+  
+  .image-interaction:hover button {
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .image-info {
+      display: none;
+    }
   }
   
